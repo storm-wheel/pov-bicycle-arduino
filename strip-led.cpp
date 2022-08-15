@@ -7,6 +7,8 @@ Adafruit_NeoPixel strips[NUMBER_OF_STRIPS] = {
 
 static bool hallSensor = false;
 
+static void printLEDStrip(Adafruit_NeoPixel *strip, int piece);
+
 void setupLEDStrips() {
   for (int i = 0; i < NUMBER_OF_STRIPS; i++) {
     strips[i].begin();
