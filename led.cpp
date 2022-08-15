@@ -3,7 +3,7 @@
 static bool on;
 
 void setupBuiltinLED() {
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED_PIN, OUTPUT);
   turnOffLED();
 }
 
@@ -29,10 +29,10 @@ void flipLED() {
 
 void turnOnLED() {
   on = true;
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(LED_PIN, HIGH);
 }
 
 void turnOffLED() {
   on = false;
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(LED_PIN, LOW);
 }

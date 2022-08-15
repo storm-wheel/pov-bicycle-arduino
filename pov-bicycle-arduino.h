@@ -9,10 +9,12 @@
 #define NUMBER_OF_PIECES 30
 #define NUMBER_OF_PIXELS 40
 #define NUMBER_OF_STRIPS 2
+
 #define STRIP_0_PIN 7
 #define STRIP_1_PIN 8
 #define EEPROM_CS_PIN 10
 #define HALL_OUTPUT_PIN 13
+#define LED_PIN 5
 
 void setupBuiltinLED();
 void indicateProcessing();
