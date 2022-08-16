@@ -12,9 +12,11 @@
 
 #define STRIP_0_PIN 7
 #define STRIP_1_PIN 8
+#define EEPROM_SCK_PIN 9
 #define EEPROM_CS_PIN 10
-#define HALL_OUTPUT_PIN 13
-#define LED_PIN 5
+#define EEPROM_COPI_PIN 11
+#define EEPROM_CIPO_PIN 12
+#define HALL_PIN 13
 
 void setupBuiltinLED();
 void indicateProcessing();

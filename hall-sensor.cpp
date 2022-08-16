@@ -31,7 +31,7 @@ static void initializePeriod() {
   period = currentTimestamp - lastTimestamp;
 }
 
-static void updatePeriod() {
+void updatePeriod() {
   bool currentHallSensor = readHallSensor();
 
   if (lastHallSensor != currentHallSensor) {
@@ -45,5 +45,5 @@ static void updatePeriod() {
 }
 
 static bool readHallSensor() {
-  return !digitalRead(HALL_OUTPUT_PIN);
+  return !digitalRead(HALL_PIN);
 }

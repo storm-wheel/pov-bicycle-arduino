@@ -7,7 +7,7 @@ Adafruit_NeoPixel strips[NUMBER_OF_STRIPS] = {
 
 static bool hallSensor = false;
 
-static void printLEDStrip(Adafruit_NeoPixel *strip, int piece);
+static void printPiece(Adafruit_NeoPixel *strip, int piece);
 
 void setupLEDStrips() {
   for (int i = 0; i < NUMBER_OF_STRIPS; i++) {
@@ -24,11 +24,11 @@ void printLEDStrips() {
     pieces[i] = (pieces[i - 1] + NUMBER_OF_PIECES * i / NUMBER_OF_STRIPS) % NUMBER_OF_PIECES;
   }
   for (int i = 0; i < NUMBER_OF_STRIPS; i++) {
-    printLEDStrip(strips + i, pieces[i]);
+    printPiece(strips + i, pieces[i]);
   }
 }
 
-static void printLEDStrip(Adafruit_NeoPixel *strip, int piece) {
+static void printPiece(Adafruit_NeoPixel *strip, int piece) {
   uint8_t pieceImage[NUMBER_OF_PIXELS * 3];
 
   SerialFlash.read(piece * NUMBER_OF_PIXELS * 3, pieceImage, NUMBER_OF_PIXELS * 3);
